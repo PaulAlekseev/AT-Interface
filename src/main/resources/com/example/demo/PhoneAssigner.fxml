@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.PhoneAssignerController">
+   <children>
+      <HBox prefHeight="753.0" prefWidth="1256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="lightOnButton" layoutX="37.0" layoutY="118.0" mnemonicParsing="false" onAction="#turnQledOnPortOn" text="Light On" />
+                  <Button fx:id="updateModemsButton" layoutX="68.0" layoutY="61.0" mnemonicParsing="false" onAction="#updateModems" text="Update modems" />
+                  <Button fx:id="lightOffButton" layoutX="142.0" layoutY="118.0" mnemonicParsing="false" onAction="#turnQledOnPortOff" text="Light Off" />
+                  <Button fx:id="SetPhoneNumberButton" layoutX="80.0" layoutY="286.0" mnemonicParsing="false" onAction="#setPhoneNumber" text="Set Number" />
+                  <TextField fx:id="phoneNumberField" layoutX="12.0" layoutY="231.0" prefHeight="25.0" prefWidth="216.0" />
+                  <Label layoutX="80.0" layoutY="184.0" text="Phone Number" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="tableView" prefHeight="752.0" prefWidth="566.0">
+              <columns>
+                <TableColumn fx:id="port" prefWidth="265.0" text="ports" />
+                  <TableColumn fx:id="iccid" prefWidth="279.0" text="iccid" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
